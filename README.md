@@ -18,7 +18,7 @@
 * Checkout the exercises branch
 
     ```bash
-    git checkout <exercise_name>
+    git checkout cpp_cmake_conan
     ```
 
 * Create a branch where you will add your solution, for example:
@@ -27,6 +27,6 @@
     git checkout -b solution
     ```
 
-* Do the tasks
+* Do the [tasks](cpp_cmake_conan/README.md)
 * Commit and push your changes
 * Share the fork with us
