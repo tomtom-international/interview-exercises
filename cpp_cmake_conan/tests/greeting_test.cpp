@@ -1,7 +1,20 @@
 #define CATCH_CONFIG_MAIN
 
 #include "catch.hpp"
+#include "Greeting.h"
 
-TEST_CASE("", "")
+
+TEST_CASE( "Positive Case","[greet]")
 {
+    std::string ecpectedStr = "hello";
+    Greeting g;
+
+    REQUIRE( ecpectedStr == g.greet() );
+}
+
+TEST_CASE( "Negative Case" ,"[greet]" )
+{
+    std::string ecpectedStr = "Wrong";
+    Greeting g;
+    REQUIRE( ecpectedStr == g.greet() );
 }
