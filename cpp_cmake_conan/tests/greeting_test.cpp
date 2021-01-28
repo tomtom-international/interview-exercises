@@ -11,10 +11,3 @@ TEST_CASE( "Positive Case","[greet]")
 
     REQUIRE( ecpectedStr == g.greet() );
 }
-
-TEST_CASE( "Negative Case" ,"[greet]" )
-{
-    std::string ecpectedStr = "Wrong";
-    Greeting g;
-    REQUIRE( ecpectedStr == g.greet() );
-}
