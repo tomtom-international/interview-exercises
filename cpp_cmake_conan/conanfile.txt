@@ -3,3 +3,7 @@ Catch2/2.5.0@catchorg/stable
 
 [generators]
 cmake
+
+[imports]
+bin, *.exe,*.dll -> .
+lib, *.dylib* -> .
