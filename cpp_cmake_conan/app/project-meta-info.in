@@ -1,0 +1,2 @@
+set( project_version 1.0.0 )
+set( project_description "Tomtom interview exercises app" )
