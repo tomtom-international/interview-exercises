@@ -12,7 +12,7 @@ if(NOT TARGET Tomtom::greeting_lib)
     find_package(greeting_lib CONFIG REQUIRED)
 endif()
 
-add_executable( greeting_app 
+add_executable( greeting_app
         main.cpp
         )
 
@@ -20,15 +20,10 @@ target_include_directories( greeting_app
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include
     )
 
-set_target_properties( greeting_app PROPERTIES 
+set_target_properties( greeting_app PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED YES
     )
-
-#target_compile_features( greeting_app
-#                        PUBLIC
-#                        cxx_std_11
-#                        )
 
 target_link_libraries( greeting_app
                         PRIVATE Tomtom::greeting_lib

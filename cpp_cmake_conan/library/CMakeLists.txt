@@ -9,19 +9,18 @@ project( greeting_lib
     )
 
 add_library( greeting_lib
-    SHARED
     )
 
 target_sources( greeting_lib
     PRIVATE greeting.cpp
     )
 
-target_include_directories( greeting_lib PUBLIC 
+target_include_directories( greeting_lib PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
     )
 
-set_target_properties( greeting_lib PROPERTIES 
+set_target_properties( greeting_lib PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED YES
     PUBLIC_HEADER include/greeting.h
@@ -30,7 +29,6 @@ set_target_properties( greeting_lib PROPERTIES
 install( TARGETS greeting_lib EXPORT greeting_lib_targets
     LIBRARY DESTINATION lib
     PUBLIC_HEADER DESTINATION include
-    RUNTIME DESTINATION bin
     )
 
 install( EXPORT greeting_lib_targets
