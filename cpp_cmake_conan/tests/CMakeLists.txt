@@ -14,10 +14,10 @@ if(NOT TARGET Tomtom::greeting_lib)
     find_package(greeting_lib CONFIG REQUIRED)
 endif()
 
-add_executable( greeting_test 
+add_executable( greeting_test
     greeting_test.cpp )
 
-set_target_properties( greeting_app PROPERTIES 
+set_target_properties( greeting_app PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED YES
     )
