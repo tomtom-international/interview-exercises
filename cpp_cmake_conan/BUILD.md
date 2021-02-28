@@ -1,26 +1,33 @@
-To build docker container with greeting_app and run it:
+#########################################################################
+#########CREATING DOCKER IMAGE###########################################
+#########################################################################
+To build docker container image with greeting_app and run it:
 
-1) build docker container with:
-$ docker build . -t <container_name>
+1) build docker image with:
+$ docker build . -t <image_name>
 
-2) run the greeting_app with following command:
-$ docker run --rm <container_name>
+2) run the greeting_app inside container with following command:
+$ docker run --rm <image_name>
 
-For launching unite tests execute following command with previoulsy build container:
+For launching unit tests execute following command with previously built image:
 
-$ docker run --rm builder ctest
+$ docker run --rm <image_name> ctest
+
+#########################################################################
+#########CREATING CONAN PACKAGE##########################################
+#########################################################################
 
 For building conan package and use it one have to:
 
-1) log in into container with following command:
+1) login into container with following command:
 
-$ docker run --rm -w /opt/src  -it builder /bin/sh
+$ docker run --rm -w /opt/src  -it <image_name> /bin/sh
 
 2a) build conan package with:
 
 $ conan create .
 
-2b) if one want to run unite tests during package creation:
+2b) if one want to run unit tests during package creation:
 
 $ conan create -e CONAN_RUN_TESTS=1 .
 

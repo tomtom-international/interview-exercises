@@ -4,7 +4,7 @@ from conans import ConanFile, CMake, tools
 class GreetingLibConan(ConanFile):
     name = "greeting_app"
     version = "1.0.0"
-    license = "<Put the package license here>"
+    license = "MIT"
     author = "Adam Perdeusz adam.perdeusz@gmail.com"
     url = "https://github.com/Gogler/interview-exercises/tree/solution"
     settings = "os", "compiler", "cppstd", "build_type", "arch"
