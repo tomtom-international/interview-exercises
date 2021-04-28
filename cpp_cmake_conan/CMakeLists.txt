@@ -9,5 +9,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(app)
 add_subdirectory(library)
 
+# Using the "cmake" generator
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+
 enable_testing()
 add_subdirectory(tests)
