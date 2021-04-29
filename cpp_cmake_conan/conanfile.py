@@ -9,11 +9,15 @@ class GreetingConan(ConanFile):
     description = """This is a Greeting Package."""
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake_find_package"
-    exports_sources = "*"
+    scm = {
+        "type": "git",
+        "url": "https://github.com/jovanz/interview-exercises.git",
+        "revision": "solution"
+    }
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure()
+        cmake.configure(source_folder="cpp_cmake_conan")
         cmake.build()
         # here you can run CTest, launch your binaries, etc
         cmake.test()
